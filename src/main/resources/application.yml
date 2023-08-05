@@ -1,0 +1,36 @@
+server:
+  port: 9000
+
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        web: INFO
+        security: INFO
+        oauth2: INFO
+
+spring:
+  config:
+    import: envfile:.env
+  datasource:
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+    # url: jdbc:postgresql://localhost:5432/auth
+    # username: postgres
+    # password: postgres!
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+auth:
+  provider-uri: https://localhost:9000
+  client-password: 9082CBD1F9B49AC62FD0E170EA4D3566392D772E351CB0C8F99C83C265CAF699
+
+
