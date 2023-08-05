@@ -11,8 +11,6 @@ logging:
         oauth2: INFO
 
 spring:
-  config:
-    import: envfile:.env
   datasource:
     url: ${DATABASE_URL}
     username: ${DATABASE_USERNAME}
