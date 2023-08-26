@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "auth.client-password",
+      "type": "java.lang.String",
+      "description": "Password for client'"
+    },
+    {
+      "name": "auth.provider-uri",
+      "type": "java.lang.String",
+      "description": "URl for server"
+    }
+  ]
+}
